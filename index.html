@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Desinflama Barriga | Diagnóstico Gratuito</title>
+    <meta name="description" content="Descubra por que sua barriga não voltou ao normal após a gravidez. Faça o diagnóstico gratuito e receba seu protocolo personalizado de 21 dias.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1571727680834480');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1571727680834480&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+    <!-- ===== PROGRESS BAR ===== -->
+    <div id="progress-wrapper" class="progress-wrapper">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </div>
+
+    <!-- ===== PERGUNTA 1 ===== -->
+    <section id="step-1" class="step active">
+        <div class="container quiz-container">
+            <div class="expert-avatar">
+                <img src="Alteracoes Gravidez.jpg" alt="Desafio Desincha Barriga" class="avatar-img">
+            </div>
+
+            <p class="question-lead">Para começarmos, me conte:</p>
+            <h2 class="question-title">
+                Quanto tempo já se passou desde a sua <span class="highlight">última gestação</span>?
+            </h2>
+
+            <div class="options-grid options-2col">
+                <button class="option-btn" onclick="selectAnswer(1, this)" data-answer="Menos de 1 ano">
+                    <span class="radio-dot"></span>
+                    Menos de 1 ano
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, this)" data-answer="1 a 5 anos">
+                    <span class="radio-dot"></span>
+                    1 a 5 anos
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, this)" data-answer="5 a 10 anos">
+                    <span class="radio-dot"></span>
+                    5 a 10 anos
+                </button>
+                <button class="option-btn" onclick="selectAnswer(1, this)" data-answer="Mais de 10 anos">
+                    <span class="radio-dot"></span>
+                    Mais de 10 anos
+                </button>
+            </div>
+
+            <div class="quiz-footer">
+                <p class="quiz-footer-text">Faça esse teste para ter um protocolo específico para seu caso. Ao final você ganha seu diagnóstico grátis.</p>
+                <p class="quiz-timer">✅ TEMPO ESTIMADO: <strong>49 SEGUNDOS</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PERGUNTA 2 ===== -->
+    <section id="step-2" class="step">
+        <div class="container quiz-container">
+            <h2 class="question-title">
+                Qual tipo de barriga mais parece com <span class="highlight">a sua hoje</span>?
+            </h2>
+
+            <div class="options-grid options-visual-grid">
+                <button class="option-visual-card" onclick="selectAnswer(2, this)" data-answer="Barriga Caída / Avental">
+                    <img src="Barriga Caída.jpg" alt="Barriga Caída / Avental" loading="lazy">
+                    <div class="visual-label">
+                        <span class="radio-dot"></span>
+                        Barriga Caída / Avental
+                    </div>
+                </button>
+                <button class="option-visual-card" onclick="selectAnswer(2, this)" data-answer="Barriga Estufada">
+                    <img src="Barriga Estufada.jpg" alt="Barriga Estufada" loading="lazy">
+                    <div class="visual-label">
+                        <span class="radio-dot"></span>
+                        Barriga Estufada
+                    </div>
+                </button>
+                <button class="option-visual-card" onclick="selectAnswer(2, this)" data-answer="Barriga Pochete">
+                    <img src="Barriga Pochete.jpg" alt="Barriga Pochete" loading="lazy">
+                    <div class="visual-label">
+                        <span class="radio-dot"></span>
+                        Barriga Pochete
+                    </div>
+                </button>
+                <button class="option-visual-card" onclick="selectAnswer(2, this)" data-answer="Barriga Estômago Alto">
+                    <img src="Barriga Estômago Alto.jpg" alt="Barriga Estômago Alto" loading="lazy">
+                    <div class="visual-label">
+                        <span class="radio-dot"></span>
+                        Barriga Estômago Alto
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PERGUNTA 3 ===== -->
+    <section id="step-3" class="step">
+        <div class="container quiz-container">
+            <h2 class="question-title">
+                Olhando para sua barriga como você classifica sua <span class="highlight">flacidez</span>?
+            </h2>
+
+            <div class="options-grid options-abc">
+                <button class="option-abc-card" onclick="selectAnswer(3, this)" data-answer="Pouco">
+                    <span class="abc-badge">A</span>
+                    <div class="abc-content">
+                        <strong>POUCO</strong> (Praticamente não aparece, não me incomoda muito)
+                    </div>
+                </button>
+                <button class="option-abc-card" onclick="selectAnswer(3, this)" data-answer="Médio">
+                    <span class="abc-badge">B</span>
+                    <div class="abc-content">
+                        <strong>MÉDIO</strong> (Aparece a flacidez, mas não chega a ser exagerado)
+                    </div>
+                </button>
+                <button class="option-abc-card" onclick="selectAnswer(3, this)" data-answer="Muito">
+                    <span class="abc-badge">C</span>
+                    <div class="abc-content">
+                        <strong>MUITO</strong> (Tem muita flacidez e me incomoda muito)
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PERGUNTA 4 ===== -->
+    <section id="step-4" class="step">
+        <div class="container quiz-container">
+            <h2 class="question-title">
+                Qual das duas opções você <span class="highlight">melhor se identifica</span>?
+            </h2>
+
+            <div class="options-grid options-visual-grid options-2-identify">
+                <button class="option-visual-card" onclick="selectAnswer(4, this)" data-answer="Já voltei ao peso">
+                    <img src="Já Voltei ao meu peso, mas não perdi barriga.jpg" alt="Já voltei ao peso" loading="lazy">
+                    <div class="visual-label">
+                        <span class="radio-dot"></span>
+                        Já voltei ao meu peso, mas não perdi a barriga pós gravidez
+                    </div>
+                </button>
+                <button class="option-visual-card" onclick="selectAnswer(4, this)" data-answer="Preciso emagrecer também">
+                    <img src="Além da Barriga, preciso emagrecer.jpg" alt="Preciso emagrecer" loading="lazy">
+                    <div class="visual-label">
+                        <span class="radio-dot"></span>
+                        Além da barriga, também preciso emagrecer
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INTERLUDE - PROVA SOCIAL ===== -->
+    <section id="step-5" class="step">
+        <div class="container quiz-container interlude-container">
+            <h2 class="interlude-title">
+                Sua meta é super possível de alcançar, em <span class="highlight">menos tempo</span> que você imagina.
+            </h2>
+            <p class="interlude-subtitle">
+                Já ajudamos mais de <strong>50 MIL mamães</strong> da maternidade real a ter resultados incríveis como esses.
+            </p>
+
+            <div class="interlude-proof">
+                <div class="proof-carousel">
+                    <div class="proof-slide active" id="proof-slide-1">
+                        <img src="Prova Social Antes e Depois 01.jpg" alt="Resultado antes e depois" loading="lazy">
+                    </div>
+                    <div class="proof-slide" id="proof-slide-2">
+                        <img src="Prova Social Antes e Depois 02.jpg" alt="Resultado antes e depois" loading="lazy">
+                    </div>
+                    <div class="proof-slide" id="proof-slide-3">
+                        <img src="Prova Social Antes e Depois 03.jpg" alt="Resultado antes e depois" loading="lazy">
+                    </div>
+                </div>
+                <p class="see-more">Veja Mais Resultados ➡️</p>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+
+            <button class="btn-primary btn-continue" onclick="goToStep(6)">
+                CONTINUAR TESTE GRATUITO
+            </button>
+
+            <p class="interlude-note">Na próxima etapa você vai descobrir o que está te impedindo de acabar com a barriga que ficou da gravidez.</p>
+        </div>
+    </section>
+
+    <!-- ===== PERGUNTA 5 ===== -->
+    <section id="step-6" class="step">
+        <div class="container quiz-container">
+            <h2 class="question-title">
+                Você sente que sua <span class="highlight">postura mudou</span> após a gravidez ou tem escapes de xixi ao fazer esforço?
+            </h2>
+
+            <div class="options-grid options-abc">
+                <button class="option-abc-card" onclick="selectAnswer(6, this)" data-answer="Sim, os dois">
+                    <span class="abc-badge">A</span>
+                    <div class="abc-content">
+                        <strong>Sim</strong>, sinto os dois frequentemente
+                    </div>
+                </button>
+                <button class="option-abc-card" onclick="selectAnswer(6, this)" data-answer="Dores nas costas">
+                    <span class="abc-badge">B</span>
+                    <div class="abc-content">
+                        <strong>Apenas dores nas costas</strong> / má postura
+                    </div>
+                </button>
+                <button class="option-abc-card" onclick="selectAnswer(6, this)" data-answer="Escapes de xixi">
+                    <span class="abc-badge">C</span>
+                    <div class="abc-content">
+                        <strong>Escapes de xixi</strong> ocasionais
+                    </div>
+                </button>
+                <button class="option-abc-card" onclick="selectAnswer(6, this)" data-answer="Nenhum">
+                    <span class="abc-badge">D</span>
+                    <div class="abc-content">
+                        <strong>Não sinto</strong> esses sintomas
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PERGUNTA 6 ===== -->
+    <section id="step-7" class="step">
+        <div class="container quiz-container">
+            <h2 class="question-title">
+                Qual o seu maior <span class="highlight">obstáculo</span> para treinar hoje? 💪
+            </h2>
+
+            <div class="options-grid options-abc">
+                <button class="option-abc-card" onclick="selectAnswer(7, this)" data-answer="Falta de tempo">
+                    <span class="abc-badge">A</span>
+                    <div class="abc-content">
+                        <strong>Falta de tempo</strong> com a rotina de mãe
+                    </div>
+                </button>
+                <button class="option-abc-card" onclick="selectAnswer(7, this)" data-answer="Não saber exercícios seguros">
+                    <span class="abc-badge">B</span>
+                    <div class="abc-content">
+                        <strong>Não saber</strong> quais exercícios são seguros para Diástase
+                    </div>
+                </button>
+                <button class="option-abc-card" onclick="selectAnswer(7, this)" data-answer="Desânimo">
+                    <span class="abc-badge">C</span>
+                    <div class="abc-content">
+                        <strong>Desânimo</strong> por não ver resultados com abdominais comuns
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOADING / ANALYZING ===== -->
+    <section id="step-loading" class="step">
+        <div class="container loading-container">
+            <div class="loading-animation">
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring delay-1"></div>
+                <div class="pulse-ring delay-2"></div>
+                <div class="loading-icon">🔬</div>
+            </div>
+            <h2 class="loading-title">Analisando suas respostas...</h2>
+            <p class="loading-subtitle">Cruzando dados do seu perfil com nosso banco de protocolos</p>
+            <div class="loading-steps">
+                <div class="loading-step" id="ls-1">
+                    <span class="ls-dot"></span>
+                    <span>Identificando tipo de barriga...</span>
+                </div>
+                <div class="loading-step" id="ls-2">
+                    <span class="ls-dot"></span>
+                    <span>Avaliando grau de diástase...</span>
+                </div>
+                <div class="loading-step" id="ls-3">
+                    <span class="ls-dot"></span>
+                    <span>Montando seu protocolo personalizado...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DIAGNÓSTICO + OFERTA ===== -->
+    <section id="step-result" class="step">
+        <div class="container result-container">
+
+            <!-- Diagnosis Section -->
+            <div class="diagnosis-card">
+                <div class="diagnosis-badge">📋 Seu Diagnóstico</div>
+                <h2 class="diagnosis-title">
+                    Seu caso é um clássico de <span class="highlight">Barriga Inflamada</span> por Diástase e Má Postura
+                </h2>
+                <div class="diagnosis-body">
+                    <p>
+                        Analisei suas respostas e identifiquei padrões claros. O que você tem <strong>não é apenas gordura</strong> que sai com dieta. 
+                    </p>
+                    <p>
+                        É uma <strong>abertura na musculatura</strong> (diástase) e um <strong>enfraquecimento do assoalho pélvico</strong> causados pela gestação.
+                    </p>
+                    <div class="diagnosis-warning">
+                        <span class="warning-icon">⚠️</span>
+                        <p><strong>Atenção:</strong> Abdominais comuns podem <strong>PIORAR</strong> o seu quadro. O que você precisa é <strong>DESINFLAMAR</strong> e <strong>REATIVAR</strong> seu core de forma segura.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Proof Before/After -->
+            <div class="social-proof-section">
+                <h3 class="section-label">✨ Resultados Reais de Mulheres Como Você</h3>
+                <div class="proof-grid">
+                    <div class="proof-card">
+                        <img src="Prova Social Antes e Depois 01.jpg" alt="Resultado antes e depois 1" loading="lazy">
+                    </div>
+                    <div class="proof-card">
+                        <img src="Prova Social Antes e Depois 02.jpg" alt="Resultado antes e depois 2" loading="lazy">
+                    </div>
+                    <div class="proof-card">
+                        <img src="Prova Social Antes e Depois 03.jpg" alt="Resultado antes e depois 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Testimonials -->
+            <div class="testimonials-section">
+                <h3 class="section-label">💬 O Que Elas Dizem</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <img src="Prova Social Texto 01.jpg" alt="Depoimento 1" loading="lazy">
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="Prova Social Texto 02.jpg" alt="Depoimento 2" loading="lazy">
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="Prova Social Texto 03.jpg" alt="Depoimento 3" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Offer Section -->
+            <div class="offer-section">
+                <div class="offer-badge">🌸 Preparado para o seu perfil</div>
+                <h2 class="offer-title">
+                    Desafio <span class="highlight">Desinflama Barriga</span>
+                </h2>
+                <p class="offer-subtitle">Veja o que você vai receber por apenas <span class="price-inline">R$ 19,90</span></p>
+
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✅</div>
+                        <div class="benefit-content">
+                            <strong>Protocolo de 21 Dias</strong>
+                            <span>Exercícios rápidos de 10-15 min/dia</span>
+                        </div>
+                    </div>
+                    <div class="benefit-item bonus">
+                        <div class="benefit-icon">🎁</div>
+                        <div class="benefit-content">
+                            <strong>BÔNUS 1: Guia Adeus Escapes de Xixi</strong>
+                            <span>Fortalecimento Pélvico completo</span>
+                        </div>
+                    </div>
+                    <div class="benefit-item bonus">
+                        <div class="benefit-icon">🎁</div>
+                        <div class="benefit-content">
+                            <strong>BÔNUS 2: Aula Postura de Rainha</strong>
+                            <span>Efeito murcha-barriga imediato</span>
+                        </div>
+                    </div>
+                    <div class="benefit-item bonus">
+                        <div class="benefit-icon">🎁</div>
+                        <div class="benefit-content">
+                            <strong>BÔNUS 3: Cardápio Anti-Inchaço de 3 Dias</strong>
+                            <span>Receitas rápidas e práticas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-box">
+                    <div class="price-from">
+                        <span>De <s>R$ 97,00</s></span>
+                    </div>
+                    <div class="price-to">
+                        <span class="price-currency">R$</span>
+                        <span class="price-value">19</span>
+                        <span class="price-cents">,90</span>
+                    </div>
+                    <div class="price-installment">ou 3x de R$ 7,22</div>
+                </div>
+
+                <a href="#" id="cta-checkout" class="btn-primary btn-cta-offer pulse-btn" target="_blank" rel="noopener" onclick="fbq('track', 'InitiateCheckout', {value: 19.90, currency: 'BRL', content_name: 'Desafio Desinflama Barriga'});">
+                    👉 QUERO MEU PROTOCOLO POR R$ 19,90
+                </a>
+
+                <div class="guarantee-section">
+                    <div class="guarantee-icon">🛡️</div>
+                    <div class="guarantee-text">
+                        <strong>Garantia de 7 dias</strong>
+                        <span>Se não gostar, devolvemos 100% do seu dinheiro. Sem perguntas.</span>
+                    </div>
+                </div>
+
+                <div class="final-trust">
+                    <div class="trust-item-small">
+                        <span>🔒</span> Pagamento Seguro
+                    </div>
+                    <div class="trust-item-small">
+                        <span>📱</span> Acesso Imediato
+                    </div>
+                    <div class="trust-item-small">
+                        <span>♾️</span> Acesso Vitalício
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
